@@ -1,0 +1,92 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <span class="text1">Welcome to</span>
+        <span class="text2">Diffusion</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- <form action="connect.php" method="post"> -->
+    <form id="login-form" style="display: none;" class="login-form" action="login.php" method="post">
+      <h2>Login</h2>
+      <label>Registered Email:</label>
+      <input type="text" placeholder="username" name="email" required>
+      <label>Password:</label>
+      <input type="password" placeholder="password" name="password" required>
+      <a  href="#">Forget Password</a>
+      <div class="submit">
+        <input class="submit" type="submit" value="Login">
+      </div>
+      <div class="toggle" href="login2.html">
+        Don't have an account? <a href="#" id="toggle-signup">Sign up</a>
+      </div>
+    </form>
+    <!-- </form> -->
+    <form id="signup-form" class="signup" action="signup.php" method="post">
+      <h2>Sign Up</h2>
+      <label>Username:</label>
+      <input type="text" placeholder="username" required name="username">
+      <label>Email:</label>
+      <input type="email" placeholder="email" required name="email">
+      <label>Password:</label>
+      <input type="password" placeholder="password" required name="password">
+      <label>Confirm Password:</label>
+      <input type="password" placeholder="Confirm your password" required name="cpassword">
+      <select class="option" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <div class="submit">
+        <input type="submit" value="Sign Up" name="submit">
+      </div>
+      <div class="toggle">
+        Already have an account? <a href="#" id="toggle-login">Login</a>
+      </div>
+    </form>
+
+  </main>
+
+  <script>
+    const loginForm = document.querySelector('#login-form');
+    const signupForm = document.querySelector('#signup-form');
+    const toggleBtn = document.querySelector('#toggle-signup');
+
+    toggleBtn.addEventListener('click', function () {
+      if (signupForm.style.display === 'none') {
+        signupForm.style.display = 'block';
+        loginForm.style.display = 'none';
+        signupForm.style.animation = 'formFadeIn 0.5s';
+      } else {
+        signupForm.style.display = 'none';
+        loginForm.style.display = 'block';
+        loginForm.style.animation = 'formFadeIn 0.5s';
+      }
+    });
+
+    const switchLogin = document.querySelector('#toggle-login');
+
+    switchLogin.addEventListener('click', function () {
+      if (loginForm.style.display === 'none') {
+        loginForm.style.display = 'block';
+        signupForm.style.display = 'none';
+        loginForm.style.animation = 'formFadeIn 0.5s';
+      } else {
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+        signupForm.style.animation = 'formFadeIn 0.5s';
+      }
+    });
+  </script>
+</body>
+
+</html>
