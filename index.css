@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e3e3e3;
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.container {
+    /* text-align: center; */
+    /* position: absolute; */
+    top: 50%;
+    margin-left: 20rem;
+    margin-top: 5rem;
+    transform: translate(-50%, -50%);
+    display: contents;
+    /* width: 100%; */
+}
+
+.container span {
+    display: flex;
+}
+
+.text1 {
+    color: white;
+    /* box-shadow: black; */
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    background: #4b6cb7;
+    border-radius: 5px;
+    position: relative;
+    animation: text 2s 1;
+}
+
+.text2 {
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, serif;
+}
+.row{
+    margin-top: 8rem;
+    margin-left: 10rem;
+}
+
+@keyframes text {
+    0% {
+        color: black;
+        margin-bottom: -40px;
+    }
+
+    30% {
+        letter-spacing: 10px;
+        margin-bottom: -40px;
+    }
+
+    85% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4b6cb7;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.toggle {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.toggle a {
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.toggle a:hover {
+    color: #182848;
+}
+
+#login-form,
+#signup-form {
+    /* margin-bottom: 100px; */
+    width: 400px;
+    margin: 50px auto;
+    padding: 40px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: white;
+}
+.signup h2{
+    margin: -10px;
+}
+
+#login-form h2,
+#signup-form h2 {
+    /* text-align: center; */
+    margin-bottom: 30px;
+}
+#signup-form{
+    margin-top: 10rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: darkblue;
+}
+
+.toggle {
+    /* text-align: center; */
+    margin-top: 20px;
+}
+
+.option{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 575.98px) {
+    /* Your CSS rules for extra small screens go here */
+    .container{
+        background-color: green;
+    }
+  }
+  
+  /* For screens between 576px and 767.98px */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    /* Your CSS rules for small screens go here */
+    .container{
+        background-color: green;
+    }
+  }
+  
+  /* For screens between 768px and 991.98px */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    /* Your CSS rules for medium screens go here */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container{
+       display: contents;
+       top: 50%;
+       /* margin-left: 20rem; */
+   }
+      header {
+        height: 100px; /* set header height */
+      }
+      
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text1{
+        margin-left: -9rem;
+        font-size: 50px;
+      }
+      .text2{
+        margin-left: -9rem;
+        font-size: 42px;
+      }
+       h2{
+        margin-top:2rem;
+        font-size: 40px;
+      }
+       label{
+        font-size: 30px;
+      }
+      form input[type="text"],
+      form input[type="email"],
+      form input[type="password"] {
+         margin-top: 13px;
+         margin-bottom: 13px;
+         padding: 18px;
+         border-radius: 17px;
+      }
+      form input[type="submit"] {
+        width: 10rem;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius:20px;
+        font-size: 16px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+    .submit{
+        text-align: center;
+    }
+    .option{
+        width: 11rem;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 13px;
+        font-size: 16px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;   
+    }
+
+    #login-form,
+#signup-form {
+    /* margin-bottom: 100px; */
+    width: 530px;
+    margin: 50px auto;
+    padding: 40px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: white;
+}
+    
+      
+  }
+  
+  /* For screens between 992px and 1199.98px */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Your CSS rules for large screens go here */
+  }
+  
+  /* For screens larger than 1200px */
+  @media (min-width: 1200px) {
+    /* Your CSS rules for extra large screens go here */
+  }
+  
